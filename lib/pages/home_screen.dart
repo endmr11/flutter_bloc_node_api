@@ -43,12 +43,12 @@ class _HomeScreenPageState extends State<HomeScreenPage> {
             showDialog<String>(
               context: context,
               builder: (BuildContext context) => AlertDialog(
-                title: const Text('Lütfen Bekleyin'),
-                content: const Text('Siliniyor.'),
+                title: const Text('Please Wait'),
+                content: const Text('Deleting.'),
                 actions: <Widget>[
                   TextButton(
-                    onPressed: () => Navigator.pop(context, 'Tamam'),
-                    child: const Text('Tamam'),
+                    onPressed: () => Navigator.pop(context, 'Okay'),
+                    child: const Text('Okay'),
                   ),
                 ],
               ),
@@ -58,12 +58,12 @@ class _HomeScreenPageState extends State<HomeScreenPage> {
             showDialog<String>(
               context: context,
               builder: (BuildContext context) => AlertDialog(
-                title: const Text('Başarılı'),
-                content: const Text('Silindi.'),
+                title: const Text('Success'),
+                content: const Text('Deleted.'),
                 actions: <Widget>[
                   TextButton(
-                    onPressed: () => Navigator.pop(context, 'Tamam'),
-                    child: const Text('Tamam'),
+                    onPressed: () => Navigator.pop(context, 'Okay'),
+                    child: const Text('Okay'),
                   ),
                 ],
               ),

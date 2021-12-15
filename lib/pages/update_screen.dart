@@ -31,12 +31,12 @@ class _UpdateScreenPageState extends State<UpdateScreenPage> {
           showDialog<String>(
             context: context,
             builder: (BuildContext context) => AlertDialog(
-              title: const Text('Lütfen Bekleyin'),
-              content: const Text('Düzenleniyor.'),
+              title: const Text('Please Wait'),
+              content: const Text('Editing.'),
               actions: <Widget>[
                 TextButton(
-                  onPressed: () => Navigator.pop(context, 'Tamam'),
-                  child: const Text('Tamam'),
+                  onPressed: () => Navigator.pop(context, 'Okay'),
+                  child: const Text('Okay'),
                 ),
               ],
             ),
@@ -46,12 +46,12 @@ class _UpdateScreenPageState extends State<UpdateScreenPage> {
           showDialog<String>(
             context: context,
             builder: (BuildContext context) => AlertDialog(
-              title: const Text('Başarılı'),
-              content: const Text('Düzenlendi.'),
+              title: const Text('Success'),
+              content: const Text('Edited.'),
               actions: <Widget>[
                 TextButton(
-                  onPressed: () => Navigator.pop(context, 'Tamam'),
-                  child: const Text('Tamam'),
+                  onPressed: () => Navigator.pop(context, 'Okay'),
+                  child: const Text('Okay'),
                 ),
               ],
             ),
@@ -62,7 +62,7 @@ class _UpdateScreenPageState extends State<UpdateScreenPage> {
       builder: (context, state) {
         return Scaffold(
           appBar: AppBar(
-            title: const Text("Düzenle"),
+            title: const Text("EDIT"),
           ),
           body: Padding(
             padding: const EdgeInsets.all(8.0),
@@ -70,7 +70,7 @@ class _UpdateScreenPageState extends State<UpdateScreenPage> {
               children: [
                 TextField(
                   controller: descController,
-                  decoration: const InputDecoration(labelText: "Açıklama"),
+                  decoration: const InputDecoration(labelText: "Description"),
                 ),
                 ElevatedButton(
                   onPressed: () {
@@ -80,7 +80,7 @@ class _UpdateScreenPageState extends State<UpdateScreenPage> {
                       ),
                     );
                   },
-                  child: const Text("Düzenle"),
+                  child: const Text("Edit"),
                 )
               ],
             ),

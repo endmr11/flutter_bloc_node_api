@@ -24,12 +24,12 @@ class _CreateScreenPageState extends State<CreateScreenPage> {
           showDialog<String>(
             context: context,
             builder: (BuildContext context) => AlertDialog(
-              title: const Text('Lütfen Bekleyin'),
-              content: const Text('Oluşturuluyor.'),
+              title: const Text('Please Wait'),
+              content: const Text('Creating.'),
               actions: <Widget>[
                 TextButton(
-                  onPressed: () => Navigator.pop(context, 'Tamam'),
-                  child: const Text('Tamam'),
+                  onPressed: () => Navigator.pop(context, 'Okay'),
+                  child: const Text('Okay'),
                 ),
               ],
             ),
@@ -39,12 +39,12 @@ class _CreateScreenPageState extends State<CreateScreenPage> {
           showDialog<String>(
             context: context,
             builder: (BuildContext context) => AlertDialog(
-              title: const Text('Başarılı'),
-              content: const Text('Oluşturuldu.'),
+              title: const Text('Success'),
+              content: const Text('Created.'),
               actions: <Widget>[
                 TextButton(
-                  onPressed: () => Navigator.pop(context, 'Tamam'),
-                  child: const Text('Tamam'),
+                  onPressed: () => Navigator.pop(context, 'Okay'),
+                  child: const Text('Okay'),
                 ),
               ],
             ),
@@ -55,7 +55,7 @@ class _CreateScreenPageState extends State<CreateScreenPage> {
       builder: (context, state) {
         return Scaffold(
           appBar: AppBar(
-            title: const Text("Ekle"),
+            title: const Text("Create"),
           ),
           body: Padding(
             padding: const EdgeInsets.all(8.0),
@@ -63,7 +63,7 @@ class _CreateScreenPageState extends State<CreateScreenPage> {
               children: [
                 TextField(
                   controller: descController,
-                  decoration: const InputDecoration(labelText: "Açıklama"),
+                  decoration: const InputDecoration(labelText: "Description"),
                 ),
                 ElevatedButton(
                   onPressed: () {
@@ -73,7 +73,7 @@ class _CreateScreenPageState extends State<CreateScreenPage> {
                       ),
                     );
                   },
-                  child: const Text("Ekle"),
+                  child: const Text("Create"),
                 )
               ],
             ),
